@@ -1,8 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('processButton').addEventListener('click', function() {
-        var messageElement = document.getElementById('message');
-        if (messageElement) {
-            messageElement.textContent = "Success. Your video is now being processed in the cloud.";
-        }
+        document.getElementById('message').textContent = "Success. Your video is now being processed in the cloud.";
     });
 });
