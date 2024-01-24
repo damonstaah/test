@@ -1,5 +1,25 @@
+console.log("Script is running!");
+
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('processButton').addEventListener('click', function() {
-        document.getElementById('message').textContent = "Success. Your video is now being processed in the cloud.";
-    });
+    console.log("DOMContentLoaded event fired");
+
+    var processButton = document.getElementById('processButton');
+    console.log("processButton:", processButton);
+
+    var messageElement = document.getElementById('message');
+    console.log("messageElement:", messageElement);
+
+    if (processButton) {
+        processButton.addEventListener('click', function() {
+            console.log("Button clicked");
+
+            if (messageElement) {
+                messageElement.textContent = "Success. Your video is now being processed in the cloud.";
+            } else {
+                console.error("Element with id 'message' not found.");
+            }
+        });
+    } else {
+        console.error("Element with id 'processButton' not found.");
+    }
 });
